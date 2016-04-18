@@ -7,7 +7,6 @@ var currentTime = Math.floor(Date.now() / 1000);
 var timedObjects = document.querySelectorAll("[data-showAfter], [data-hideAfter]");
 
 for (i = 0; i < timedObjects.length; i++) {
-	timedObjects[i].innerHTML = currentTime;
 	if (timedObjects[i].hasAttribute("data-showAfter") && timedObjects[i].getAttribute("data-showAfter") <= currentTime) {
 		timedObjects[i].className += " shownAfter";
 	} else {
