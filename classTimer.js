@@ -4,7 +4,7 @@ if (!Date.now) {
 }
 
 var currentTime = Math.floor(Date.now() / 1000);
-var timedObjects = document.querySelectorAll("div");
+var timedObjects = document.querySelectorAll("[data-showAfter], [data-hideAfter]");
 
 for (i = 0; i < timedObjects.length; i++) {
 	timedObjects[i].innerHTML = currentTime;
